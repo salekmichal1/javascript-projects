@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="sounds">
+      <audio src="./src/sounds/boom.wav" controls id="sound1"></audio>
+      <audio src="./src/sounds/clap.wav" controls id="sound2"></audio>
+      <audio src="./src/sounds/hihat.wav" controls id="sound3"></audio>
+      <audio src="./src/sounds/kick.wav" controls id="sound4"></audio>
+      <audio src="./src/sounds/openhat.wav" controls id="sound5"></audio>
+      <audio src="./src/sounds/ride.wav" controls id="sound6"></audio>
+    </div>
+    <div class="buttons">
+      <div class="chanel">
+        <p>Chanel one</p>
+        <button class="btn record-btn record-btn--one">Record</button>
+        <button class="btn play-btn play-btn--one">Play</button>
+      </div>
+      <div class="chanel">
+        <p>Chanel two</p>
+        <button class="btn record-btn record-btn--two">Record</button>
+        <button class="btn play-btn play-btn--two">Play</button>
+      </div>
+      <div class="chanel">
+        <p>Chanel three</p>
+        <button class="btn record-btn record-btn--three">Record</button>
+        <button class="btn play-btn play-btn--three">Play</button>
+      </div>
+      <div class="chanel">
+        <p>Chanel four</p>
+        <button class="btn record-btn record-btn--four">Record</button>
+        <button class="btn play-btn play-btn--four">Play</button>
+      </div>
+    </div>
+    <div>
+      <button class="btn metronome-start-btn">Metronome start</button>
+      <button class="btn metronome-stop-btn">Metronome stop</button>
+
+      <input type="number" class="tempo" />
+    </div>
+    <script src="./src/script.js"></script>
+  </body>
+</html>
