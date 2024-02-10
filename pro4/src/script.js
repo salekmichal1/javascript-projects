@@ -2,7 +2,8 @@
 const notesContainer = document.querySelector('.notes-container');
 
 const addButton = document.querySelector('.options__add-btn');
-const titleInput = document.querySelector('.note__title');
+const searchBtn = document.querySelector('.search__btn');
+const searchInput = document.querySelector('.search__input');
 
 if (
   localStorage.getItem('notes') === null ||
@@ -128,6 +129,27 @@ const changeNoteColor = function (id, color) {
   console.log(noteToChange.classList.contains(color), color);
 };
 
+const searchNotes = function () {
+  const allNotes = document.querySelectorAll('.note');
+
+  const notes = getNotes();
+  const searchValue = searchInput.value.trim().toLowerCase();
+
+  const filteredNotes = notes.filter(note =>
+    Object.values(note).some(
+      value =>
+        typeof value === 'string' && value.toLowerCase().includes(searchValue)
+    )
+  );
+  if (filteredNotes.length === 0) {
+    allNotes.forEach(note => note.remove());
+    alert('Nie znaleziono');
+  } else {
+    allNotes.forEach(note => note.remove());
+    displayNotes(filteredNotes);
+  }
+};
+
 addButton.addEventListener('click', function () {
   const newDate = new Date().toLocaleString();
   const newNote = {
@@ -142,3 +164,5 @@ addButton.addEventListener('click', function () {
 
   displayNotes([newNote]);
 });
+
+searchBtn.addEventListener('click', searchNotes);

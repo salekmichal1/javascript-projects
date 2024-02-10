@@ -1,9 +1,5 @@
 "use strict";
 
-// const valueOne = document.getElementById("value-one");
-// const valueTwo = document.getElementById("value-two");
-// const valueThree = document.getElementById("value-three");
-// const valueFour = document.getElementById("value-four");
 const sumValue = document.getElementById("sum-value");
 const avgValue = document.getElementById("avg-value");
 const minValue = document.getElementById("min-value");
